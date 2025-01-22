@@ -1,0 +1,112 @@
+{% extends 'pethaven/base.html' %}
+{% load static %}
+{% block title %}Home{% endblock title %}
+
+{% block banner-slider %}
+<div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active" $carousel-transition-duration: .6s>
+        <img src="{% static 'pethaven/images/banner/b1.jpg' %}" class="d-block w-100" alt="image 1">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'pethaven/images/banner/b2.jpg' %}" class="d-block w-100" alt="image 2">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'pethaven/images/banner/b3.jpg' %}" class="d-block w-100" alt="image 3">
+      </div>
+      <div class="carousel-item">
+        <img src="{% static 'pethaven/images/banner/b4.jpg' %}" class="d-block w-100" alt="image 4">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+{% endblock banner-slider %}
+
+{% block information %}
+
+<div class="container">
+    <div class="row text-left p-5 text-light border-bottom shadow" style="background-color: #79336a;">
+
+        <h1>PetHaven</h1>
+        <small class="fs-5" >
+            At PetHaven, we make it easy and exciting to find your perfect furry, feathery, or scaly companion! Whether you're looking for a loyal dog, a playful cat, a chirpy bird, or any of the usual pets, we've got a wide variety of adorable animals waiting to meet you.<br>
+            Our mission is to connect loving homes with pets who need them, creating bonds that last a lifetime. Explore detailed profiles of pets available for adoption, learn about their unique personalities, and find the one that fits perfectly into your family.<br>
+
+            Not sure which pet is right for you? Our helpful guides and caring team will walk you through the process, ensuring you’re ready for your new friend. At PetHaven, we’re more than a website – we’re a community dedicated to bringing joy to both humans and animals.<br>
+
+            Start your journey today and discover your next best friend at PetHaven! Because every pet deserves love, and every person deserves the joy of a loyal companion.
+        </small>
+    </div>
+</div>
+
+{% endblock information %}
+
+
+{% block main-content %}
+    <div class="container">
+        <h1>Cats</h1>
+    </div>
+    <br><br>
+
+
+    <div class="row container" style="margin: 0 auto; max-width: 1200px; text-align: center; border-color: #79336a; border-radius: 1 px;">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="goodnessec contentrow smbg" style="margin: 0 auto; width: 1200px; text-align: center;">
+                <a href="{% url 'category' 'C' %}">
+                    <div class="goodnesseccont text-center">
+                        <img src="{% static 'pethaven/images/product/cathome.png' %}?v=2" class="img-responsive center-block mb-2" alt="">
+                        <p class="mlkpro">Cats</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row container" style="margin: 0 auto; max-width: 1200px; text-align: center;">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="goodnessec contentrow smbg" style="margin: 0 auto; width: 1200px; text-align: center;">
+                <a href="{% url 'category' 'D' %}">
+                    <div class="goodnesseccont text-center">
+                        <img src="{% static 'pethaven/images/product/doghome.png' %}?v=3" class="img-responsive center-block mb-2" alt="">
+                        <p class="mlkpro">Dogs</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row container" style="margin: 0 auto; max-width: 1200px; text-align: center;">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="goodnessec contentrow smbg" style="margin: 0 auto; width: 1200px; text-align: center;">
+                <a href="{% url 'category' 'B' %}">
+                    <div class="goodnesseccont text-center">
+                        <img src="{% static 'pethaven/images/product/birdhome.png' %}?v=2" class="img-responsive center-block mb-2" alt="">
+                        <p class="mlkpro">Birds</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div class="row container" style="margin: 0 auto; max-width: 1200px; text-align: center;">
+        <div class="col-md-4 col-sm-4 mi-go wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" style="animation-duration: 1s; animation-delay: 0.6s; animation-name: none;">
+            <div class="goodnessec contentrow smbg" style="width: 1200px; text-align: center;">
+                <a href="{% url 'category' 'o' %}">
+                    <div class="goodnesseccont text-center">
+                        <img src="{% static 'pethaven/images/product/otherhome.png' %}?v=2" class="img-responsive center-block mb-2" alt="">
+                        <p class="mlkpro text-decoration-none">Others</p>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <br><br>
+    
+{% endblock main-content %}

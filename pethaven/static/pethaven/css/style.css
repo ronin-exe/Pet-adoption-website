@@ -1,0 +1,77 @@
+.owl-carousel .item{
+ /* border: 1px solid black; */
+ font-size: 24px;
+ text-align: center;
+ margin-top: 20px;
+ transition: transform .5s ease;
+}
+
+ .owl-carousel .item:hover{
+    /* border: 1px solid black; */
+    transform : scale(1.1);
+}
+
+.owl-carousel img{
+    transition: transform .5s ease;
+}
+ 
+
+.owl-next{
+ float:right;
+}
+.owl-prev{
+ float:left;
+}
+.owl-prev span{
+ font-size: 24px;
+ font-weight: bold;
+}
+.owl-next span{
+ font-size: 24px;
+ font-weight: bold;
+}
+
+
+
+
+.contentrow{
+    background-color:#ffffff;
+    background-image:linear-gradient(#ffffff, #ffffff);
+    background-image:-webkit-linear-gradient(#ffffff, #ffffff);
+    background-image:-moz-linear-gradient(#ffffff, #ffffff);
+    background-image:-ms-linear-gradient(#ffffff, #ffffff);
+    background-image:-o-linear-gradient(#ffffff, #ffffff);
+    border-color: #79336a;
+    padding:50px 40px;
+    border-width: 2px;
+    padding-bottom:20px;
+}
+
+
+.goodnessseccont img{
+    width:100%;
+    text-decoration: none;
+}
+
+.mlkpro{
+    color:#000000;
+    text-decoration: bold;
+    font-size:25 px;
+    line-height:22px;
+    margin-bottom:15px;
+    width:43%;
+    margin:0 auto;
+    text-align: center;
+}
+
+.goodnesssec a{
+    text-decoration: none;
+
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    text-align: left;
+    padding: 0.5rem 1rem;
+}

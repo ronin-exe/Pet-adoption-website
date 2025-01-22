@@ -1,0 +1,46 @@
+{% extends 'pethaven/base.html' %}
+{% load static %}
+{% block title %}Registration{% endblock title %}
+
+{% block main-content %}
+    <br>
+
+    <div class="container">
+        <div class="row my-3">
+            <div class="col-sm-6 offset-sm-3">
+                <h3 class="text-center fw-bold" style="color: #79336a;">Registration</h3>
+
+                <form action="" method="post" novalidate class="p-5" style="box-shadow: 5px 5px 10px rgb(121, 51, 106, 0.5);">
+                    {% csrf_token %}
+                    {% for fm in form %}
+                        {{fm.label_tag}} {{fm}} <small class="text-danger">{{fm.errors|striptags}}</small>
+                        <br>
+                    {% endfor %}
+
+                    <div class="text-center" style="align-items: center;">
+                        <input type="submit" value="submit" class="btn text-white" style="background-color: #79336a;"> <br>
+                    </div>
+                    <div class="text-center fw-bold" style="color: black;">
+                        <small>Have an account? <a href="{% url 'login' %}" style="color: #79336a; text-decoration: none;"> Login</a></small>
+                    </div>
+
+                    {% if form.non_field_errors %}
+                        {% for error in form.non_field_errors %}
+                        <p class="alert alert-danger my-3">{{error}}</p>
+                        {% endfor %}
+                    {% endif %}
+
+                    {% if messages %}
+                        {% for msg in messages %}
+                            <div class="alert alert-{{msg.tags}}" role="alert">
+                                {{msg}}
+                            </div>
+                        {% endfor %}
+                    {% endif %}
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <br><br>
+{% endblock main-content %}

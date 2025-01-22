@@ -1,0 +1,46 @@
+{% extends 'pethaven/base.html' %}
+{% load static %}
+{% block title %}Favourite{% endblock title %}
+
+{% block main-content %}
+<br>
+<div class="container my-5">
+    <div class="row">
+        {% if basket %}
+            <h1 class="text-center mb-5">Favourites</h1>
+            <div class="col-sm-8">
+                <div class="card">
+                    <div class="card-body">
+                        
+
+                        {% for item in basket %}
+                            <div class="row">
+                                <div class="col-sm-3 text-center align-self-center">
+                                    <img src="{{item.product.product_image.url}}" alt="" srcset="" class="img-fluid img-thumbnail shadow-sm" height="150" width="150">
+                                </div>
+
+                                <div class="col-sm-9">
+                                    <div>
+                                        <h5>{{item.product.title}}</h5>
+                                        <p class="text-muted mb-2 small">{{item.product.description}}</p><br>
+                                        
+                                            <div class="d-flex justify-content-between">
+                                                <p class="mb-0"><span><strong>Adoption Fee: BDT {{item.product.adoption_fee}}</strong></span></p>
+                                            </div>
+                                    </div>
+                                </div>
+                            </div>
+                                <hr class="text-muted">
+                                {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+
+            {% else %}
+                <h1 class="text-center mb-5">No favourites</h1>
+            {% endif %}
+    </div>
+</div>
+
+{% endblock main-content %}
